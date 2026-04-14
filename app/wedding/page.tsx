@@ -69,34 +69,6 @@ export default function WeddingPage() {
           We would love to see the day through your eyes. Upload your photos
           below and enjoy the live gallery.
         </p>
-
-<div className="upload-actions">
-  <label className="upload-button" htmlFor="gallery-upload">
-    Choose from gallery
-  </label>
-  <input
-    id="gallery-upload"
-    type="file"
-    accept="image/*"
-    multiple
-    onChange={handleUpload}
-    disabled={uploading}
-    className="visually-hidden-input"
-  />
-
-  <label className="upload-button secondary" htmlFor="camera-upload">
-    Take photo
-  </label>
-  <input
-    id="camera-upload"
-    type="file"
-    accept="image/*"
-    capture="environment"
-    onChange={handleUpload}
-    disabled={uploading}
-    className="visually-hidden-input"
-  />
-</div>
         
         <div className="upload-card">
           <div className="upload-row">

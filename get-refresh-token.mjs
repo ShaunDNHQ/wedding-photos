@@ -1,9 +1,14 @@
 import { google } from "googleapis";
 import readline from "node:readline";
+import "dotenv/config";
 
 const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const REDIRECT_URI = "http://localhost:3000/oauth2callback";
+
+if (!CLIENT_ID || !CLIENT_SECRET) {
+  throw new Error("Missing GOOGLE_CLIENT_ID or GOOGLE_CLIENT_SECRET in .env.local");
+}
 
 const oauth2Client = new google.auth.OAuth2(
   CLIENT_ID,

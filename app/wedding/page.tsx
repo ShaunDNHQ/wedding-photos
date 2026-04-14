@@ -77,6 +77,7 @@ export default function WeddingPage() {
               <input
                 type="file"
                 accept="image/*"
+                capture="environment"
                 multiple
                 onChange={handleUpload}
                 disabled={uploading}

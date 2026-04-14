@@ -1,7 +1,31 @@
 import { NextResponse } from "next/server";
+import { Readable } from "node:stream";
 import { getDrive } from "@/lib/googleDrive";
 
 export const runtime = "nodejs";
+
+function nodeStreamToWebStream(stream: Readable): ReadableStream<Uint8Array> {
+  return new ReadableStream({
+    start(controller) {
+      stream.on("data", (chunk) => {
+        const uint8 =
+          chunk instanceof Buffer ? new Uint8Array(chunk) : new Uint8Array(Buffer.from(chunk));
+        controller.enqueue(uint8);
+      });
+
+      stream.on("end", () => {
+        controller.close();
+      });
+
+      stream.on("error", (err) => {
+        controller.error(err);
+      });
+    },
+    cancel() {
+      stream.destroy();
+    },
+  });
+}
 
 export async function GET(
   _req: Request,
@@ -23,7 +47,9 @@ export async function GET(
       { responseType: "stream" }
     );
 
-    return new NextResponse(fileResponse.data as ReadableStream, {
+    const webStream = nodeStreamToWebStream(fileResponse.data as Readable);
+
+    return new NextResponse(webStream, {
       headers: {
         "Content-Type": mimeType,
         "Cache-Control": "public, max-age=60",

@@ -2,10 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-export const metadata = {
-  title: "Shaun & Sharon Wedding Photos",
-};
-
 type GalleryFile = {
   id: string;
   name?: string;

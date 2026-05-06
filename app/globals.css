@@ -55,7 +55,7 @@ a {
 
 .hero h1 {
   margin: 0 0 14px;
-  font-size: clamp(32px, 6vw, 58px);
+  font-size: clamp(120px, 6vw, 58px);
   line-height: 1;
   font-weight: 600;
   font-family:'WeddingFont';

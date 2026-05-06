@@ -63,8 +63,8 @@ export default function WeddingPage() {
   return (
     <main className="wedding-page">
       <section className="hero">
-        <p className="eyebrow">Shaun &amp; Sharon</p>
-        <h1>Share your wedding photos</h1>
+        <p className="eyebrow">Share</p>
+        <h1>the love</h1>
         <p className="intro">
           We would love to see the day through your eyes. Upload your photos
           below and enjoy the live gallery.

@@ -19,6 +19,12 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "CormorantGaramond-VariableFontwght";
+  src: url("/fonts/CormorantGaramond-VariableFontwght.woff2") format("woff2");
+  font-style: normal;
+}
+
 
 html,
 body {

@@ -139,7 +139,8 @@ a {
 
 .gallery-section h2 {
   margin: 0 0 18px;
-  font-size: 28px;
+  font-family: WeddingFont;
+  font-size: clamp(40px, 6vw, 58px);
   text-align: center;
 }
 

@@ -58,6 +58,7 @@ a {
   font-size: clamp(32px, 6vw, 58px);
   line-height: 1;
   font-weight: 600;
+  font-family:'WeddingFont';
 }
 
 .intro {

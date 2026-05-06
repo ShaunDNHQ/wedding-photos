@@ -104,7 +104,7 @@ export default function WeddingPage() {
       </section>
 
       <section className="gallery-section">
-        <h2>Live gallery</h2>
+        <h2>live gallery</h2>
         <div className="gallery-grid">
           {files.map((file) => (
             <a

@@ -115,17 +115,7 @@ export default function WeddingPage() {
         </p>
         <div className="gallery-grid">
           {files.map((file) => (
-            <!--
-            <a
-              key={file.id}
-              href={file.url}
-              target="_blank"
-              rel="noreferrer"
-              className="gallery-item"
-            >
-              <img src={file.url} alt={file.name || "Wedding photo"} loading="lazy" />
-            </a>
-            -->
+            
               
               <button
   key={file.id}

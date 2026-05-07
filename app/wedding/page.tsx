@@ -74,7 +74,13 @@ export default function WeddingPage() {
           <div className="upload-row">
 
             
-            
+            <input
+              className="code-input"
+              type="text"
+              placeholder="Event code"
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+            />
             <label className="upload-button">
               {uploading ? "Uploading..." : "Upload photos"}
               
@@ -90,13 +96,7 @@ export default function WeddingPage() {
               />
             </label>
 
-            <input
-              className="code-input"
-              type="text"
-              placeholder="Event code"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-            />
+            
           </div>
 
           {message ? <p className="status-message">{message}</p> : null}

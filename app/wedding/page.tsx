@@ -83,10 +83,10 @@ export default function WeddingPage() {
             />
             <label className="upload-button">
               <img
-    src="/icons/camera.png"
-    alt=""
-    className="camera-icon"
-  />
+                src="/icons/camera-l.png"
+                alt=""
+                className="camera-icon"
+              />
               {uploading ? "Uploading..." : "Upload photos"}
 
               <input

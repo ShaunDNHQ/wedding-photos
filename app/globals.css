@@ -102,7 +102,7 @@ a {
   justify-content: center;
   align-items: center;
   min-width: 190px;
-  padding: 14px 18px;
+  padding: 20px;
   border-radius: 999px;
   background: var(--accent);
   color: white;
@@ -115,21 +115,26 @@ a {
   transform: translateY(-1px);
   opacity: 0.95;
 }
+.upload-button img {
+  width:20px;
+  margin-right:10px;
+}
 
 .code-input {
   min-width: 180px;
   padding: 14px 16px;
-  border-radius: 999px;
+  border-radius: 10px;
   border: 1px solid var(--line);
   background: white;
   color: var(--text);
   outline: none;
+  font-size:16px;
 }
 
 .status-message {
   margin: 14px 0 0;
   color: var(--accent-dark);
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .gallery-section {
@@ -138,10 +143,17 @@ a {
 }
 
 .gallery-section h2 {
-  margin: 0 0 18px;
-  font-family: WeddingFont;
-  font-size: clamp(40px, 6vw, 58px);
   text-align: center;
+  margin: 0px 0 -5px 0;
+  font-family: WeddingFont;
+  font-size: clamp(50px, 6vw, 58px);
+}
+
+.gallery-count {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--muted);
 }
 
 .gallery-grid {
@@ -176,8 +188,9 @@ a {
   }
 
   .upload-card {
-    padding: 16px;
     border-radius: 18px;
+    width: 80%;
+    padding: 20px;
   }
 
   .upload-row {

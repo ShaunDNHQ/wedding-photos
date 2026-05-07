@@ -148,6 +148,7 @@ a {
   margin: 0px 0 -5px 0;
   font-family: WeddingFont;
   font-size: clamp(50px, 6vw, 58px);
+  word-spacing: -0.175em;
 }
 
 .gallery-count {

@@ -110,7 +110,7 @@ export default function WeddingPage() {
       <section className="gallery-section">
         <h2>live gallery</h2>
         <p className="gallery-count">
-          {files.length} {files.length === 1 ? "photo" : "photos"} shared 💛
+          {files.length} {files.length === 1 ? "photo" : "photos"} shared
         </p>
         <div className="gallery-grid">
           {files.map((file) => (

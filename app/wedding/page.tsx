@@ -82,14 +82,13 @@ export default function WeddingPage() {
               onChange={(e) => setCode(e.target.value)}
             />
             <label className="upload-button">
-              {uploading ? "Uploading..." : "Upload photos"}
-
               <img
     src="/icons/camera.png"
     alt=""
     className="camera-icon"
   />
-              
+              {uploading ? "Uploading..." : "Upload photos"}
+
               <input
                 type="file"
                 accept="image/*"

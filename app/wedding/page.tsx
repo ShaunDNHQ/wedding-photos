@@ -115,6 +115,7 @@ export default function WeddingPage() {
         </p>
         <div className="gallery-grid">
           {files.map((file) => (
+            <!--
             <a
               key={file.id}
               href={file.url}
@@ -124,6 +125,18 @@ export default function WeddingPage() {
             >
               <img src={file.url} alt={file.name || "Wedding photo"} loading="lazy" />
             </a>
+            -->
+              <button
+  key={file.id}
+  className="gallery-item"
+  onClick={() => setActiveImage(file.url)}
+>
+  <img
+    src={file.url}
+    alt={file.name || "Wedding photo"}
+    loading="lazy"
+  />
+</button>
           ))}
         </div>
       </section>

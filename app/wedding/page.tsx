@@ -14,6 +14,7 @@ export default function WeddingPage() {
   const [uploading, setUploading] = useState(false);
   const [code, setCode] = useState("");
   const [message, setMessage] = useState("");
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   async function loadGallery() {
     const res = await fetch("/api/gallery", { cache: "no-store" });

@@ -141,6 +141,26 @@ export default function WeddingPage() {
           ))}
         </div>
       </section>
+      {activeImage && (
+        <div
+          className="lightbox"
+          onClick={() => setActiveImage(null)}
+        >
+          <button
+            className="lightbox-close"
+            onClick={() => setActiveImage(null)}
+          >
+            ✕
+          </button>
+      
+          <img
+            src={activeImage}
+            alt="Wedding photo"
+            className="lightbox-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </main>
   );
 }

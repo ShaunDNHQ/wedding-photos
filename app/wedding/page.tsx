@@ -126,6 +126,7 @@ export default function WeddingPage() {
               <img src={file.url} alt={file.name || "Wedding photo"} loading="lazy" />
             </a>
             -->
+              
               <button
   key={file.id}
   className="gallery-item"
